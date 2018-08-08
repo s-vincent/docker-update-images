@@ -46,6 +46,7 @@ func main() {
   }
 
   tree := GetDockerImageOptMap(docks)
+  fmt.Println(tree)
   err = UpdateDockerImage(tree, *forcePtr)
 
   if err != nil {

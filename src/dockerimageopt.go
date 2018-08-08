@@ -72,7 +72,7 @@ func (d* DockerImageOpt) GetTag() string {
 
 // Return image and tag.
 func (d* DockerImageOpt) GetImage() string {
-  return d.name + ":" + d.tag
+  return d.tag
 }
 
 // Return parent image (i.e. FROM).
@@ -158,7 +158,7 @@ func buildImage(d DockerImageOpt, cli *client.Client) (err error) {
   }
 
   tar := new(archivex.TarFile)
-  tarFileName := "./" + d.GetName() + "-" + d.GetTag() + ".tar"
+  tarFileName := "./" + d.GetName() + ".tar"
   tar.Create(tarFileName)
   //fmt.Println(filepath.Dir(d.dockerfile))
   tar.AddAll("./" + filepath.Dir(d.dockerfile), false)

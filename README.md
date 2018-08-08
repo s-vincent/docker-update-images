@@ -56,23 +56,19 @@ We ship an example of configuration file as well as Dockerfile samples:
 
 ```
 [images.hello]
-name = "test-hello"
-tag = "v1"
+tag = ["test-hello:v1"]
 dockerfile = "./samples/hello/Dockerfile"
 
 [images.hello2]
-name = "test-hello"
-tag = "v2"
+tag = ["test-hello:v2"]
 dockerfile = "./samples/hello2/Dockerfile"
 
 [images.hello3]
-name = "test-hello"
-tag = "v3"
+tag = ["test-hello:v3"]
 dockerfile = "./samples/hello3/Dockerfile"
 
 [images.hello4]
-name = "test-hello"
-tag = "v4"
+tag = ["test-hello:v4"]
 dockerfile = "./samples/hello4/Dockerfile"
 ```
 

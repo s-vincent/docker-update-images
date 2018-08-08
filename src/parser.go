@@ -8,7 +8,7 @@ import (
 
 type dockerConfig struct {
   Name string
-  Tag string
+  Tag []string
   Dockerfile string
 }
   
@@ -26,7 +26,7 @@ func Parse(filePath string) ([]DockerImageOpt, error) {
 
   docks := []DockerImageOpt{}
   for key, dc := range config.Images {
-    d, err := NewDockerImageOpt(dc.Name, dc.Tag, dc.Dockerfile)
+    d, err := NewDockerImageOpt(key, dc.Tag[0], dc.Dockerfile)
 
     if err != nil {
       fmt.Fprintln(os.Stderr, "Warning: error processing", key, "record")
