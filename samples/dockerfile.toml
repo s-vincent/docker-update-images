@@ -1,0 +1,20 @@
+[images.hello]
+name = "test-hello"
+tag = "v1"
+dockerfile = "./hello/Dockerfile"
+
+[images.hello2]
+name = "test-hello"
+tag = "v2"
+dockerfile = "./hello2/Dockerfile"
+
+[images.hello3]
+name = "test-hello"
+tag = "v3"
+dockerfile = "./hello3/Dockerfile"
+
+[images.hello4]
+name = "test-hello"
+tag = "v4"
+dockerfile = "./hello4/Dockerfile"
+
